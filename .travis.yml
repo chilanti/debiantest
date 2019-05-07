@@ -6,6 +6,7 @@ env:
 script: 
 - go run -v ./...
 - go build -v ./...
-- ls ./src/debiantest
+- ls
+- goxc
 after_success:
 - tar -tvf gobuild.tar ./src/debiantest
