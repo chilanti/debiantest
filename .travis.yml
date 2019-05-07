@@ -6,6 +6,6 @@ env:
 script: 
 - go run -v ./...
 - go build -v ./...
-- ls
-after-success:
+- ls ./src/debiantest
+after_success:
 - tar -tvf gobuild.tar ./src/debiantest
