@@ -1,4 +1,4 @@
-language: go
+ßlanguage: go
 go:
 - master
 env:
