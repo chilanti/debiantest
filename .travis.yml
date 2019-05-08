@@ -4,7 +4,7 @@ go:
 env:
 - GOPATH=/debiantest
 before_install:
-  - sudo apt-get install -y devscripts build-essential lintian
+  - sudo apt-get install -y devscripts build-essential lintian equivs
 script: 
 - go run -v ./...
 - go build -v ./...
