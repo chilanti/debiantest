@@ -12,6 +12,7 @@ script:
 - cp ./debiantest ./knapp-0.0.1/tree/knapp
 - cp ./debiantest ./knapp-0.0.1/tree/knapp-watcher
 - cd ./knapp-0.0.1
+- mk-build-deps debian/control
 - debuild
 - cd ..
 - ls
