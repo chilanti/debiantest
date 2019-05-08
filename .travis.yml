@@ -10,7 +10,7 @@ script:
 - cp ./debiantest ./knapp-0.0.1/tree/knapp
 - cp ./debiantest ./knapp-0.0.1/tree/knapp-watcher
 - cd ./knapp-0.0.1
-- apt-get install devscripts build-essential lintian
+- sudo apt-get install devscripts build-essential lintian
 - debuild
 - cd ..
 - ls
