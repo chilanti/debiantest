@@ -9,5 +9,7 @@ script:
 - tar -xvf knapp-deb.tar
 - cp ./debiantest ./knapp-0.0.1/tree/knapp
 - cp ./debiantest ./knapp-0.0.1/tree/knapp-watcher
-after_success:
+- cd ./knapp-0.0.1
+- debuild
+- cd ..
 - ls
