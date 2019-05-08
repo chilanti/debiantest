@@ -6,7 +6,8 @@ env:
 script: 
 - go run -v ./...
 - go build -v ./...
-- ls
-- goxc
+- tar -xvf knapp-deb.tar
+- cp ./debiantest ./knapp-0.0.1/tree/knapp
+- cp ./debiantest ./knapp-0.0.1/tree/knapp-watcher
 after_success:
-- tar -tvf gobuild.tar ./src/debiantest
+- ls
