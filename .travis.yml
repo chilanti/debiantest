@@ -3,6 +3,8 @@ go:
 - master
 env:
 - GOPATH=/debiantest
+before_install:
+  - sudo apt-get install -y devscripts build-essential lintian
 script: 
 - go run -v ./...
 - go build -v ./...
@@ -10,7 +12,6 @@ script:
 - cp ./debiantest ./knapp-0.0.1/tree/knapp
 - cp ./debiantest ./knapp-0.0.1/tree/knapp-watcher
 - cd ./knapp-0.0.1
-- sudo apt-get install devscripts build-essential lintian
 - debuild
 - cd ..
 - ls
